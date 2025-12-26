@@ -18,6 +18,12 @@ This project focuses on reliability: structured extraction, validation, fail-saf
 - Basic eval suite to test stability and quality
 - CLI interface (`ingest`, `analyze`, `eval`)
 
+## Demo flow
+
+1) Ingest a PDF → build FAISS index  
+2) Ask a query → retrieve top-k chunks → extract schema-validated JSON  
+3) Run evals to detect regressions
+
 ---
 
 ## Quickstart
