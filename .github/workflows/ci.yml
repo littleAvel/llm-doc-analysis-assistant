@@ -28,6 +28,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Build index (ingest sample PDF)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LOG_LEVEL: INFO
+        run: |
+          PYTHONPATH=. python -m app.cli ingest --file docs/sample.pdf --doc-id sample
+
       - name: Run eval suite
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
