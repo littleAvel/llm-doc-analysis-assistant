@@ -11,6 +11,8 @@ class ExperienceItem(BaseModel):
 
 
 class DocumentSummary(BaseModel):
+    refusal: bool = False
+    refusal_reason: Optional[str] = None
     candidate_name: Optional[str] = None
     location: Optional[str] = None
     email: Optional[str] = None

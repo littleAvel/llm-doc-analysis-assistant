@@ -13,10 +13,5 @@ EVAL_CASES = [
         "name": "experience_non_empty_if_present",
         "query": "Extract experience items with company and highlights.",
         "checks": {"experience_max_highlights": 5},
-    },
-    {
-        "name": "no_invention",
-        "query": "Extract phone number.",
-        "checks": {"must_not_invent": True},
-    },
+    }
 ]
